@@ -1,3 +1,5 @@
+// https://github.com/nadimnil/basic-js
+
 // 1.First Problem  Solution Kilometer To Meter:
 function kilometerToMeter(kilometer){
 
@@ -11,7 +13,7 @@ function kilometerToMeter(kilometer){
         return "Distance cannot be negative" ;
     }
 
-   
+    
   }
         var result = kilometerToMeter(3.5);
         console.log(result);
@@ -43,7 +45,7 @@ function badgetCalculator( numberOfWatch, numberOfPhone, numberOfLaptop ) {
 
             if(costFirstTenDays <= 10 && costFirstTenDays > (0).toFixed){        
         
-                return costFirstTenDays * 100 ;        //First Ten Days Cost Per Day (100)
+                return costFirstTenDays * 100 ;                      //First Ten Days Cost Per Day (100)
                 
         
             }
