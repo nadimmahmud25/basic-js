@@ -1,4 +1,4 @@
-// https://github.com/nadimnil/basic-js
+// https://github.com/nadimnil/basic-js 
 
 // 1.First Problem  Solution Kilometer To Meter:
 function kilometerToMeter(kilometer){
@@ -15,60 +15,57 @@ function kilometerToMeter(kilometer){
 
     
   }
-        var result = kilometerToMeter(3.5);
+        var result = kilometerToMeter(5.5);
         console.log(result);
 
 
 //2. Second Problem Solution Budget Calculator:
 
-function badgetCalculator( numberOfWatch, numberOfPhone, numberOfLaptop ) {
+function budgetCalculator( numberOfWatch, numberOfPhone, numberOfLaptop ) {
             
-    if( numberOfWatch >= (0).toFixed && numberOfPhone >= (0).toFixed && numberOfLaptop >= (0).toFixed){
+    if( numberOfWatch <= 0|| numberOfPhone <= 0 || numberOfLaptop <= 0){
 
-        return numberOfWatch * 50 + numberOfPhone * 100 + numberOfLaptop * 500; 
+        return "Please Enter Valid Quntity."     
     }
-
+    else if (Math.floor(numberOfWatch) != numberOfWatch || Math.floor(numberOfPhone) != numberOfPhone || Math.floor(numberOfLaptop) != numberOfLaptop) {
+        return "Please Enter Valid Quntity."
+    }
     else
     {
-        return "Please Input Valid Quntity" ;          
+        return numberOfWatch * 50 + numberOfPhone * 100 + numberOfLaptop * 500;    
     }
 
    }
 
-   var result = badgetCalculator(2,-3,1)
+   var result = budgetCalculator(-2,3,1)
    console.log(result);
         
 
         //3.Third Problem Solution Hotel Cost:
 
-        function hotelCost(costFirstTenDays){                        
+        function hotelCost(costFirstTenDays){   
+            if (Math.floor(costFirstTenDays) != costFirstTenDays || costFirstTenDays <= 0) {
+                return "Please Enter Valid Days."
+            }                     
 
-            if(costFirstTenDays <= 10 && costFirstTenDays > (0).toFixed){        
+           
+            else if(costFirstTenDays >= 21){
         
-                return costFirstTenDays * 100 ;                      //First Ten Days Cost Per Day (100)
-                
-        
+                let extraDaysCost = costFirstTenDays - 20;
+                return  extraDaysCost * 50 + 1800 ;                // Second Ten Days Cost Per Day =50 and including first and second ten days cost(1800)                   
             }
-        
-            else if(costFirstTenDays <= 20 && costFirstTenDays > (10).toFixed){
+
+            else if(costFirstTenDays <= 20 && costFirstTenDays > 10){
         
                 let costSecondTenDays = costFirstTenDays - 10;
                 return costSecondTenDays * 80 + 1000 ;              // Second Ten Days Cost Per Day = 80 And including first ten days cost(1000).
-            
-            
-            }
-        
-            else if(costFirstTenDays >= (21).toFixed){
-        
-                let extraDaysCost = costFirstTenDays - 20;
-                return  extraDaysCost * 50 + 1800 ;          // Second Ten Days Cost Per Day =50 and including first and second ten days cost(1800)                   
-            }
-        
+  
+            }       
             else{
-                return "Please Input Valid Days" ;
+                return costFirstTenDays * 100 ;
             }
         }
-        var result = hotelCost(21.5);
+        var result = hotelCost(10.5);
         console.log(result);
 
 
@@ -93,5 +90,3 @@ function badgetCalculator( numberOfWatch, numberOfPhone, numberOfLaptop ) {
     console.log(result);
 
    
-
-  
